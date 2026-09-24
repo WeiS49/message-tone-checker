@@ -1,5 +1,6 @@
 {
   "name": "jev-mind-reader",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jev 发送前检查</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="heading-row">
+          <h1>Jev 发送前检查</h1>
+          <label class="language-picker">
+            <span id="language-label">语言</span>
+            <select id="language">
+              <option value="zh" selected>中文</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+        </div>
+        <p class="lede">选好沟通对象和表达目标，检查语气，再对照修改、复制发送。</p>
+      </header>
+      <section class="check-setup">
+        <label class="recipient-picker">
+          <span id="recipient-label">沟通对象</span>
+          <select id="recipient">
+            <option value="colleague" selected>同事 / 合作伙伴</option>
+            <option value="teacher">老师 / 上级</option>
+            <option value="client">客户</option>
+            <option value="friend">朋友 / 家人</option>
+          </select>
+        </label>
+        <p id="recipient-hint">选择沟通对象会设置推荐目标，也可以自行调整。</p>
+        <fieldset class="goal-options">
+          <legend id="goals-label">表达目标</legend>
+          <div id="goal-options"></div>
+        </fieldset>
+        <p id="goals-note">检查结果仅供参考。输入暂停后，草稿会发送至 Vercel AI Gateway 分析。</p>
+      </section>
+      <div class="text-comparison">
+        <section id="original-panel" class="original-panel" hidden>
+          <label id="original-label" class="text-label" for="original-text">A · 原句</label>
+          <textarea id="original-text" rows="3" maxlength="2000" readonly></textarea>
+        </section>
+        <section class="draft-panel">
+          <label id="draft-label" class="text-label" for="text">当前文本</label>
+          <textarea
+            id="text"
+            rows="3"
+            maxlength="2000"
+            placeholder="试试：麻烦今天把报告发给我，如果需要更多时间请告诉我。"
+            aria-label="输入让 Jev 分析的文字"
+            autofocus
+          ></textarea>
+        </section>
+      </div>
+      <div class="comparison-actions">
+        <button id="copy-text" type="button" disabled>复制当前文本</button>
+        <button id="pin-original" type="button" disabled>固定为原句</button>
+        <button id="clear-original" type="button" hidden>结束对照</button>
+        <button id="retry" type="button" hidden>重新分析</button>
+        <span id="copy-feedback" role="status" aria-live="polite"></span>
+        <p id="comparison-hint">输入一句话，等分析完成后固定为原句，再尝试改写。</p>
+      </div>
+      <p id="status" class="status" aria-live="polite">等待输入</p>
+      <section id="goal-checks" class="goal-checks" aria-label="目标检查"></section>
+      <details id="details">
+        <summary id="details-label">查看全部分析</summary>
+        <section id="cards" class="cards" aria-label="Jev 的分析结果"></section>
+      </details>
+    </main>
+    <script type="module" src="./app.ts"></script>
+  </body>
+</html>

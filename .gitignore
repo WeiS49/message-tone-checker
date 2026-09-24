@@ -1,9 +1,17 @@
 # Secrets (API keys live here; never commit)
 .env
+.env.*
 .env*.local
 
 # Claude Code session files (dev-log, specs)
 .claude/
 
+# Private Codex project notes
+.codex/
+
 # Dependencies
 node_modules/
+
+# Local operating system files and runtime logs
+.DS_Store
+*.log

@@ -1,8 +1,9 @@
-// Local server for the mind reader: POST /api/read runs Jev on a piece of text.
+// Local server for the mind reader: serves the web page at / and runs Jev on text at POST /api/read.
 // It binds to 127.0.0.1 only, so the API key it holds is never reachable from other machines.
 
 import { evaluate, hasApiKey, JevError } from "./jev";
 import { questions } from "./questions";
+import index from "./web/index.html";
 
 const MAX_CHARS = 2000;
 
@@ -33,6 +34,7 @@ const server = Bun.serve({
   hostname: "127.0.0.1",
   port: Number(process.env.PORT ?? 3000),
   routes: {
+    "/": index,
     "/api/read": { POST: read },
   },
   development: process.env.NODE_ENV !== "production",
