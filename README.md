@@ -124,7 +124,7 @@ Yes. The interface can switch between Chinese and English. The language switch c
 
 Before a public push, review the author and committer names and email addresses in the existing Git history. Changing your Git email only affects future commits; it does not remove addresses from past commits. GitHub documents how to use a [private commit email](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address).
 
-This repository currently has no license file. Choose a license if you want to grant others explicit reuse rights. Publishing the source also does not make the local API ready for public hosting: authentication and usage limits would need separate work.
+This repository uses the [MIT License](LICENSE). Publishing the source also does not make the local API ready for public hosting: authentication and usage limits would need separate work.
 
 This project already uses Git locally. It is not published by these instructions until you complete the push. To share its source publicly without losing the existing history:
 
