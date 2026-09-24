@@ -1,0 +1,9 @@
+# Secrets (API keys live here; never commit)
+.env
+.env*.local
+
+# Claude Code session files (dev-log, specs)
+.claude/
+
+# Dependencies
+node_modules/
