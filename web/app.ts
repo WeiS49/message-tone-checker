@@ -199,7 +199,7 @@ function renderGoalChecks() {
     card.dataset.tone = result;
     const title = result === "pass" ? "Looks aligned" : result === "review" ? "Consider adjusting"
       : result === "unknown" ? "Uncertain" : !hasText ? "Waiting for input" : failed ? "Analysis unavailable" : "Reading…";
-    const advice = result === "review" ? goal.advice : result === "unknown" ? "Jev is unsure here. Use your judgment."
+    const advice = result === "review" ? goal.advice : result === "unknown" ? "The analysis is uncertain here. Use your judgment."
       : result === "pass" ? "The current wording appears to fit this goal." : "";
     card.append(el("h3", undefined, t(goal.label)), el("p", "goal-result", t(title)));
     if (ready) {
@@ -249,15 +249,15 @@ function renderComparison() {
 
 function applyLanguage() {
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
-  document.title = t("Jev Send Check");
-  document.querySelector("h1")!.textContent = t("Jev Send Check");
+  document.title = t("Message Tone Checker");
+  document.querySelector("h1")!.textContent = t("Message Tone Checker");
   document.querySelector(".lede")!.textContent = t(
     "Choose your audience and goals, check the tone, then compare, edit, and copy your message.",
   );
   document.querySelector("#language-label")!.textContent = t("Language");
   input.placeholder = t("Try: Please send me the report today. Let me know if you need more time.");
-  input.setAttribute("aria-label", t("Message for Jev to read"));
-  grid.setAttribute("aria-label", t("Jev's readings"));
+  input.setAttribute("aria-label", t("Message to check"));
+  grid.setAttribute("aria-label", t("Analysis results"));
   status.textContent = statusMessage();
   for (const [selector, text] of [
     ["#recipient-label", "Who is this for?"], ["#recipient-hint", "Choosing an audience sets suggested goals. You can adjust them."],

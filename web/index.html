@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jev 发送前检查</title>
+    <meta name="application-name" content="Message Tone Checker" />
+    <title>发送前语气检查</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main>
       <header>
         <div class="heading-row">
-          <h1>Jev 发送前检查</h1>
+          <h1>发送前语气检查</h1>
           <label class="language-picker">
             <span id="language-label">语言</span>
             <select id="language">
@@ -20,6 +21,7 @@
           </label>
         </div>
         <p class="lede">选好沟通对象和表达目标，检查语气，再对照修改、复制发送。</p>
+        <p class="attribution">Powered by TypeSafe Jev</p>
       </header>
       <section class="check-setup">
         <label class="recipient-picker">
@@ -50,7 +52,7 @@
             rows="3"
             maxlength="2000"
             placeholder="试试：麻烦今天把报告发给我，如果需要更多时间请告诉我。"
-            aria-label="输入让 Jev 分析的文字"
+            aria-label="输入待检查的消息"
             autofocus
           ></textarea>
         </section>
@@ -67,7 +69,7 @@
       <section id="goal-checks" class="goal-checks" aria-label="目标检查"></section>
       <details id="details">
         <summary id="details-label">查看全部分析</summary>
-        <section id="cards" class="cards" aria-label="Jev 的分析结果"></section>
+        <section id="cards" class="cards" aria-label="分析结果"></section>
       </details>
     </main>
     <script type="module" src="./app.ts"></script>

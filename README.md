@@ -1,18 +1,18 @@
-# Jev Send Check
+# Message Tone Checker
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 A local pre-send checker for seeing how a message may read before you send it.
 
-![Jev Send Check demo](docs/demo.gif)
+![Message Tone Checker demo](docs/demo.gif)
 
 _The demo uses fictional text and contains no personal information._
 
-## What is Jev Send Check?
+## What is Message Tone Checker?
 
-Jev Send Check is a small web app for people drafting messages to colleagues, managers, teachers, clients, friends, or family. It checks signals such as politeness, intent, expected reply, urgency, formality, emotion, and sarcasm.
+Message Tone Checker is a small web app for people drafting messages to colleagues, managers, teachers, clients, friends, or family. It checks signals such as politeness, intent, expected reply, urgency, formality, emotion, and sarcasm.
 
-The app uses [TypeSafe Jev](https://docs.typesafe.ai/introduction), which evaluates typed questions and returns structured values and probability distributions. Jev Send Check turns those values into focused communication checks; it does not generate a replacement message.
+The app uses [TypeSafe Jev](https://docs.typesafe.ai/introduction), which evaluates typed questions and returns structured values and probability distributions. Message Tone Checker turns those values into focused communication checks; it does not generate a replacement message.
 
 ## What can it help with?
 
@@ -61,7 +61,7 @@ You need [Bun](https://bun.sh/) and a Vercel AI Gateway API key with access to `
 
 4. Open <http://127.0.0.1:3000>.
 
-On macOS, you can double-click `start.command`. It starts the development server, waits until the app is ready, and opens the page. Keep its Terminal window open while using Jev; press Control-C there to stop it.
+On macOS, you can double-click `start.command`. It starts the development server, waits until the app is ready, and opens the page. Keep its Terminal window open while using Message Tone Checker; press Control-C there to stop it.
 
 ## Architecture and data flow
 
@@ -86,13 +86,13 @@ flowchart LR
 
 - Results are probabilistic estimates about wording, not facts about a reader's reaction.
 - Relationship history and real-world context are not analyzed unless they appear in the draft itself.
-- Jev Send Check does not rewrite, proofread, or automatically send messages.
+- Message Tone Checker does not rewrite, proofread, or automatically send messages.
 - Drafts are limited to 2,000 characters.
 - Analysis needs an internet connection, a valid API key, and available gateway credit.
 
 ## Frequently asked questions
 
-### Is Jev Send Check a message rewriting tool?
+### Is Message Tone Checker a message rewriting tool?
 
 No. It checks the current wording and shows structured signals. You decide whether and how to edit the message.
 

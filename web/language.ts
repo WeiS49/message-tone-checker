@@ -1,7 +1,7 @@
 export type Language = "zh" | "en";
 
 const simplifiedChinese: Record<string, string> = {
-  "Jev Send Check": "Jev 发送前检查",
+  "Message Tone Checker": "发送前语气检查",
   "Choose your audience and goals, check the tone, then compare, edit, and copy your message.":
     "选好沟通对象和表达目标，检查语气，再对照修改、复制发送。",
   "Try: Please send me the report today. Let me know if you need more time.":
@@ -37,15 +37,11 @@ const simplifiedChinese: Record<string, string> = {
   "Consider adjusting": "可以再调整",
   Uncertain: "暂不确定",
   "Analysis unavailable": "分析暂不可用",
-  "Jev is unsure here. Use your judgment.": "Jev 对这一项把握不足，请结合实际情况判断。",
+  "The analysis is uncertain here. Use your judgment.": "这一项的分析把握不足，请结合实际情况判断。",
   "The current wording appears to fit this goal.": "当前措辞看起来符合这个目标。",
-  "Jev Mind Reader": "Jev 读心输入框",
-  "Jev mind reader": "Jev 读心输入框",
-  "Type anything and Jev reads it as you go. Every bar is a probability, and a faded card means Jev isn't sure.":
-    "随便输入一句话，Jev 会实时分析。每根条表示一个概率，卡片越淡，说明 Jev 越不确定。",
   "Try: Wow, overtime again this weekend, I'm thrilled 🙄": "试试：哇，这周末又要加班，真是太开心了 🙄",
-  "Message for Jev to read": "输入让 Jev 分析的文字",
-  "Jev's readings": "Jev 的分析结果",
+  "Message to check": "输入待检查的消息",
+  "Analysis results": "分析结果",
   Language: "语言",
   "Analysis failed": "分析失败",
   "A · Original": "A · 原句",

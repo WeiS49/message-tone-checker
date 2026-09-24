@@ -87,8 +87,14 @@ h1 {
 }
 
 .lede {
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+
+.attribution {
   margin: 0 0 20px;
   color: var(--muted);
+  font-size: 12px;
 }
 
 .check-setup {
